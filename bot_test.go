@@ -36,7 +36,7 @@ func (t testLogger) Printf(format string, v ...interface{}) {
 }
 
 func getBot(t *testing.T) (*BotAPI, error) {
-	bot, err := NewBotAPI(TestToken)
+	bot, err := NewBotAPI(TestToken, "")
 	bot.Debug = true
 
 	logger := testLogger{t}
